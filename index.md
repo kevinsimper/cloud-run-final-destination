@@ -31,9 +31,27 @@ class: middle
 ---
 class: middle
 
+# my goals
+
+---
+
+# i want to deploy everything
+
+# really fast
+
+# without locking myself in
+
+---
+class: middle
+
+# php hosting
+
+---
+class: middle
+
 # digital agency
 
-# jails freebsd
+# jails & freebsd
 
 ???
 
@@ -41,7 +59,14 @@ it was genius and complicated
 
 wordpress hosting
 
-newsletter
+newsletter brought down our servers
+
+---
+class: middle, blue
+
+## Conclusion:
+
+# scaling is difficult
 
 ---
 class: middle
@@ -52,12 +77,26 @@ class: middle
 
 it was terrific and terrible
 
-3 GB blobs
+---
+class: middle, red
+
+## Nightmare!
+
+# 3 GB blobs
+
+---
+class: middle, blue
+
+## Conclusion:
+
+# deploying is difficult
 
 ---
 class: middle
 
-# docker meetup group
+# 2015
+
+# 📣 docker meetup group
 
 ???
 
@@ -72,7 +111,7 @@ February 2015 about Docker hosting
 ---
 class: middle
 
-# docker startup
+# 2015 docker startup
 
 ???
 
@@ -83,6 +122,26 @@ ideas to run on spot instances
 quit our jobs
 
 kubernetes & docker swarm
+
+
+---
+class: middle
+
+<img src="./yc.jpg"/>
+
+---
+class: middle
+
+# docker swarm vs. kubernetes
+
+### thought swarm would win 😅
+
+---
+class: middle, blue
+
+## Conclusion:
+
+# multitenantcy is difficult
 
 ---
 
@@ -105,9 +164,16 @@ had no websocket api
 closed down 2018
 
 ---
+class: middle, blue
+
+# hypervisor container
+
+## now kata-containers
+
+---
 class: middle
 
-# serverless lambda
+# AWS serverless lambda
 
 ???
 
@@ -115,6 +181,19 @@ used it with this tool called up
 
 AWS gateway & AWS Lambda
 launched 2014
+
+limits 50 megabytes compressed
+
+could not teach it
+
+---
+class: middle, blue
+
+## Conclusion:
+
+# Proprietary
+
+# Difficult to test
 
 ---
 class: middle
@@ -125,30 +204,68 @@ class: middle
 
 connected cars
 
+began teaching workshops 2016 feb
+
+---
+class: middle, blue
+
+
+## Conclusion:
+
+# Not cheap!
+
 ---
 class: middle
 
-# cloud functions
+# Cloud functions
 
 ???
 
 waited to launch in europe
 
-2017 October
+2017 October copenhagenjs
+
+---
+class: middle, blue
+
+
+## Conclusion:
+
+# Can't control runtime!
 
 ---
 class: middle
 
 # KNative
 
-????
+### Open Source serverless framework ontop Istio
+
+???
 
 2018 November
+
+gave a demo
 
 ---
 class: middle
 
+# We need:
+
+## - quick to deploy
+
+## - cheap
+
+## - custom runtime
+
+
+---
+class: middle
+
+### Enter
+
 # Cloud Run
+
+### Hosted KNative
 
 ???
 
@@ -163,11 +280,11 @@ class: middle
 
 ---
 
-# Takes a docker container
+# - Takes a docker container
 
-# Listen on env PORT
+# - Listen on env PORT
 
-# Pay per request & gigabyte memory/sec
+# - Pay per request & gigabyte memory/sec
 
 ---
 class: middle
@@ -179,7 +296,14 @@ class: middle
 ---
 class: middle
 
-# Moved everything to Cloud Run
+# Stackdriver
+
+---
+class: middle
+
+## I moved
+
+# everything to Cloud Run
 
 ---
 class: middle
@@ -187,15 +311,90 @@ class: middle
 # Example:
 
 ---
+class: middle
+
+### $ gcloud beta run deploy \\<br/>cloud-run-continuous-deployment-example \\<br/>--image=gcr.io/cloud-run-cd-example cloud-run-continuous-deployment-example:$SHORT_SHA --region=europe-west1\\<br/>--platform=managed'
+
+---
+
+# Regions
 
 ```
-gcloud beta run deploy cloud-run-continuous-deployment-example --image=gcr.io/cloud-run-cd-example cloud-run-continuous-deployment-example:$SHORT_SHA --region=us-central1'
+* asia-northeast1
+* europe-west1
+* us-central1
+* us-east1
 ```
 
 ---
 class: middle
 
-# Loss leader
+# Cloud SQL
+
+???
+
+proxy, not exposing databases to the network
+---
+class: middle
+
+# Yes, YAML
+
+### KNative YAML
+
+???
+
+proxy, not exposing databases to the network
+
+---
+
+```
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+spec:
+  template:
+    spec:
+      containerConcurrency: 10
+      containers:
+      - image: gcr.io/cloud-native-aarhus-cloud-run/cloud-run-cloud-native-aarhus:845c6872
+...
+```
+---
+
+## $ gcloud alpha run services replace<br/>--platform managed <br/> --region=europe-west1<br/>example/service.yaml
+
+---
+
+```
+Step #2: ERROR: (gcloud.beta.run.deploy) User
+[806337517016@cloudbuild.gserviceaccount.com]
+does not have permission to access project
+[cloud-native-aarhus-cloud-run:testIamPermissions]
+ (or it may not exist): Cloud Resource Manager API
+has not been used in project 806337517016 before
+ or it is disabled. Enable it by visiting
+ https://console.cloud.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=806337517016
+  then retry. If you enabled this API recently,
+  wait a few minutes for the action to propagate to our systems and retry.
+Step #2: - '@type': type.googleapis.com/google.rpc.Help
+```
+
+---
+class: middle, blue
+
+# Conclusion
+
+---
+class: middle
+
+# Loss leader 💸
+
+### for google
+
+## law of big numbers
+
+???
+
+it takes a lot of customers to earn money, average income
 
 ---
 class: middle
@@ -214,6 +413,18 @@ class: middle
 ---
 class: middle
 
-# Do deploy on each commit!
+# Tip: deploy on each commit!
 
 ---
+class: middle, black
+
+# Cloud Run is a new Era!
+
+# You should join!
+
+---
+class: middle, black
+
+# Thank you
+
+## kevinsimper.dk
