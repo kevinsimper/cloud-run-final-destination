@@ -5,6 +5,13 @@ class: middle, blue
 ### Kevin Simper
 
 ---
+class: middle
+
+# disclaimer: I am not getting paid
+
+### Please help 😆
+
+---
 
 # I like organizing meetups
 
@@ -35,11 +42,14 @@ class: middle
 
 ---
 
-# i want to deploy everything
+## I want to deploy:
 
-# really fast
+## - everything<br>- really fast<br>- without locking myself in<br>- cheaply<br>
 
-# without locking myself in
+---
+class: middle, black
+
+# My life started simple..
 
 ---
 class: middle
@@ -129,6 +139,10 @@ class: middle
 
 <img src="./yc.jpg"/>
 
+???
+
+rejected, we could not explain our goal
+
 ---
 class: middle
 
@@ -212,7 +226,9 @@ class: middle, blue
 
 ## Conclusion:
 
-# Not cheap!
+# Awesome!
+
+# But not cheap!
 
 ---
 class: middle
@@ -298,6 +314,10 @@ class: middle
 
 # Stackdriver
 
+## - Logs
+
+## - Metrics
+
 ---
 class: middle
 
@@ -334,6 +354,14 @@ class: middle
 ???
 
 proxy, not exposing databases to the network
+
+----
+class: middle
+
+# Scaling
+
+## Example:
+
 ---
 class: middle
 
