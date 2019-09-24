@@ -39,6 +39,10 @@ class: middle
 
 it was genius and complicated
 
+wordpress hosting
+
+newsletter
+
 ---
 class: middle
 
@@ -61,6 +65,8 @@ saw it and knew it would solve all my problems
 
 miss the first one
 
+January 2015 Mark Coleman
+
 February 2015 about Docker hosting
 
 ---
@@ -70,7 +76,11 @@ class: middle
 
 ???
 
-Ycombinator interview
+ycombinator interview
+
+ideas to run on spot instances
+
+quit our jobs
 
 kubernetes & docker swarm
 
@@ -84,7 +94,15 @@ class: middle
 
 ???
 
-implemented kubernetes with multi tenantcy
+mark coleman
+
+implemented kubernetes with multi tenantcy - impressive
+
+they implemented not kubernetes - but docker api
+
+had no websocket api
+
+closed down 2018
 
 ---
 class: middle
@@ -101,7 +119,7 @@ launched 2014
 ---
 class: middle
 
-# kubernetes
+# Kubernetes
 
 ???
 
@@ -116,7 +134,7 @@ class: middle
 
 waited to launch in europe
 
-2017 Summer
+2017 October
 
 ---
 class: middle
@@ -130,13 +148,38 @@ class: middle
 ---
 class: middle
 
-# cloud run
+# Cloud Run
 
 ???
 
 December 2018
 
 Martin Omander
+
+---
+class: middle
+
+# What is Cloud Run exactly?
+
+---
+
+# Takes a docker container
+
+# Listen on env PORT
+
+# Pay per request & gigabyte memory/sec
+
+---
+class: middle
+
+# Free HTTPS
+
+### via webmastertools
+
+---
+class: middle
+
+# Moved everything to Cloud Run
 
 ---
 class: middle
@@ -148,5 +191,29 @@ class: middle
 ```
 gcloud beta run deploy cloud-run-continuous-deployment-example --image=gcr.io/cloud-run-cd-example cloud-run-continuous-deployment-example:$SHORT_SHA --region=us-central1'
 ```
+
+---
+class: middle
+
+# Loss leader
+
+---
+class: middle
+
+# Serverless is focusing on shipping
+
+### Don't fall for the Hacker News trolls
+
+---
+class: middle
+
+# Do try it out
+
+# Do configure CD
+
+---
+class: middle
+
+# Do deploy on each commit!
 
 ---
